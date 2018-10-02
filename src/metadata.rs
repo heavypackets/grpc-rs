@@ -31,7 +31,7 @@ fn normalize_key(key: &str, binary: bool) -> Result<Cow<str>> {
         if b >= b'A' && b <= b'Z' {
             is_upper_case = true;
             continue;
-        } else if b >= b'a' && b <= b'z' || b >= b'0' && b <= b'9' || b == b'_' || b == b'-' {
+        } else if b >= b'a' && b <= b'z' || b >= b'0' && b <= b'9' || b == b'_' || b == b'-' || b == b'.' {
             continue;
         }
         return Err(Error::InvalidMetadata(format!("key {:?} is invalid", key)));
