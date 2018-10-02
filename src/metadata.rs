@@ -89,7 +89,7 @@ impl MetadataBuilder {
                 ));
             }
         }
-        //let key = normalize_key(key, false)?;
+        let key = normalize_key(key, false)?;
         self.add_metadata(&key, value.as_bytes())
     }
 
